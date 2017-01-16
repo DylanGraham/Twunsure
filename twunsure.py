@@ -6,6 +6,6 @@ auth.set_access_token(secrets.access_token, secrets.access_token_secret)
 
 api = tweepy.API(auth)
 
-public_tweets = api.search('ducks')
+public_tweets = api.search(q='ducks', lang='en')
 for tweet in public_tweets:
     print(tweet.text)
